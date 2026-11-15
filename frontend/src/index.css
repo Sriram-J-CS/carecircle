@@ -1,0 +1,44 @@
+@import './design/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Editorial Card */
+  .care-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E4DCCB;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(15, 92, 90, 0.08);
+  }
+
+  .dark .care-card {
+    background-color: #152626;
+    border-color: #223838;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Interactive Card */
+  .care-card-interactive {
+    background-color: #FFFFFF;
+    border: 1px solid #E4DCCB;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(15, 92, 90, 0.08);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .care-card-interactive:hover {
+    border-color: #0F5C5A;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(15, 92, 90, 0.12);
+  }
+
+  .dark .care-card-interactive {
+    background-color: #152626;
+    border-color: #223838;
+  }
+  .dark .care-card-interactive:hover {
+    border-color: #1E7F7B;
+  }
+}

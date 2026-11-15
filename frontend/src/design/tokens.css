@@ -1,0 +1,94 @@
+:root {
+  /* Colors */
+  --color-ink: #12302F;
+  --color-ink-muted: #527573;
+  --color-teal-deep: #0F5C5A;
+  --color-teal-600: #1E7F7B;
+  --color-teal-mint: #E6F2EF;
+  --color-paper: #FBF8F3;
+  --color-sand: #F1EBDF;
+  --color-sand-border: #E4DCCB;
+  --color-clay: #C8553D;
+  --color-clay-light: #FCEFEA;
+  --color-amber: #D9922B;
+  --color-amber-light: #FEF6E9;
+  --color-sage: #3F8F5B;
+  --color-sage-light: #EAF5EE;
+
+  /* Typography */
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --type-scale: 1.25;
+  --line-height-base: 1.5;
+
+  /* Shapes & Depth */
+  --radius-card: 20px;
+  --radius-input: 14px;
+  --radius-pill: 9999px;
+  --shadow-soft: 0 8px 30px rgba(15, 92, 90, 0.08);
+  --shadow-modal: 0 20px 50px rgba(18, 48, 47, 0.2);
+
+  /* Touch & Focus */
+  --touch-target-min: 56px;
+  --focus-ring-width: 3px;
+  --focus-ring-color: #0F5C5A;
+}
+
+.dark {
+  --color-ink: #EAF2EF;
+  --color-ink-muted: #9EB8B5;
+  --color-paper: #0E1A1A;
+  --color-sand: #152626;
+  --color-sand-border: #223838;
+  --color-teal-mint: #152F2E;
+  --focus-ring-color: #1E7F7B;
+}
+
+/* Base Body Style */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  line-height: var(--line-height-base);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Headings in Fraunces Soft Serif */
+h1, h2, h3, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Numbers in Tabular Format */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Patient Accessible Large Text Rule */
+.patient-view {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Minimum 56px Accessible Tap Target */
+.touch-target {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+}
+
+/* Visible 3px Focus Ring for AAA Accessibility */
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
