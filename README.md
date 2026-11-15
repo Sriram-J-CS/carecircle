@@ -1,5 +1,6 @@
 # 🌸 CareCircle — The Autonomous AI Elder-Care Companion
 
+[![Live Demo on Netlify](https://img.shields.io/badge/Netlify-Live%20Demo-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://carecircle-ai-aczh.netlify.app)
 [![CI / Test Suite](https://img.shields.io/badge/pytest-21%20passed-success?style=for-the-badge&logo=pytest&logoColor=white)](backend/tests/)
 [![Frontend Tests](https://img.shields.io/badge/vitest-4%20passed-success?style=for-the-badge&logo=vitest&logoColor=white)](frontend/src/tests/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
@@ -11,6 +12,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 > **"Never alone. Always cared for."**  
+> 🌐 **Live Public Application:** **[https://carecircle-ai-aczh.netlify.app](https://carecircle-ai-aczh.netlify.app)**  
 > An autonomous, voice-first AI care companion designed specifically for India's 138 million elderly population. CareCircle closes the critical loop between elderly individuals living alone, their distant family, and healthcare providers by combining **biometric Face-ID login**, **strict one-at-a-time camera-verified medication intake**, **continuous 6-hour multi-modal AI health triage**, **ethical consent-based pharmacy ordering**, and **fail-safe emergency escalations**.
 
 ---
@@ -475,21 +477,18 @@ The database includes three pre-configured accounts for instant evaluation:
 
 ## 13. Netlify Deployment Guide
 
-CareCircle is configured for **1-click zero-config continuous deployment** on Netlify.
+CareCircle is deployed live on Netlify with automated continuous deployment and global CDN caching:
 
-### Repository Deployment via Netlify
-1. Log in to [Netlify](https://app.netlify.com).
-2. Click **Add new site** > **Import an existing project**.
-3. Select **GitHub** and authorize `Sriram-J-CS/carecircle`.
-4. Netlify will automatically detect `netlify.toml`:
-   - **Base directory**: `frontend`
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-5. Click **Deploy Site**.
-6. Set environment variable in Netlify Site Settings:
-   - `VITE_API_URL`: Your deployed backend URL (or production backend instance).
+* **🌐 Live Production URL**: [https://carecircle-ai-aczh.netlify.app](https://carecircle-ai-aczh.netlify.app)
+* **⚙️ Netlify Project Dashboard**: [https://app.netlify.com/projects/carecircle-ai-aczh](https://app.netlify.com/projects/carecircle-ai-aczh)
 
-Your site will be live instantly with a global CDN and automatic SSL certificate!
+### Repository Deployment Configuration
+The repository includes pre-configured `netlify.toml` and SPA `_redirects`:
+- **Base directory**: `frontend`
+- **Build command**: `npm run build`
+- **Publish directory**: `dist`
+- **SPA Routing**: `/* /index.html 200`
+- **Security Headers**: HSTS, X-Frame-Options DENY, nosniff, XSS protection
 
 ---
 
